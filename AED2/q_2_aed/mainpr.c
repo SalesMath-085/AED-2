@@ -58,7 +58,7 @@ void questao_2(int*vetor_de_1milhao){
     //}
     printf("-------------------------------\n");
     
-    calcula_estatistica(tempo_da_busca_vetor, n);
-    calcula_estatistica(tempo_da_busca_lista, n);
+    calcula_estatistica(tempo_da_busca_vetor, n,"Busca Sequencial no vetor");
+    calcula_estatistica(tempo_da_busca_lista, n,"Busca Sequencial na lista");
 
 }

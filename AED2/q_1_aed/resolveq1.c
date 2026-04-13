@@ -31,8 +31,6 @@ void questao_1(int* vetor_de_1milhao){
             tempo_da_busca_sequencial[repeticoes_acumuladas]=(double)(tempo_final-tempo_inicial)/CLOCKS_PER_SEC;//calcula os segundos//
         }
     }
-    calcula_estatistica(tempo_da_busca_sequencial, quantidades_de_repeticoes);
-
 
     ///// CRIA VETOR ORDENADO ////////////
     int*vetor_de_1milhao_ordenado=cria_vetor_ordenado(tam);
@@ -57,7 +55,19 @@ void questao_1(int* vetor_de_1milhao){
             tempo_da_busca_binaria[repeticoes_acumuladas]=(double)(tempo_final-tempo_inicial)/CLOCKS_PER_SEC;//calcula os segundos//
         }
     }
-    calcula_estatistica(tempo_da_busca_binaria, quantidades_de_repeticoes);
+
+
+    //  MOSTRA OS TEMPOS DE EXECUCAO E ESTATISTICAS //
+    printf("RODADAS    BUSCA BINARIA    BUSCA SEQUENCIAL\n");
+
+
+    for(int i=1;i<=(quantidades_de_repeticoes/2);i++){
+        printf("RODADA %i    ",i);
+        printf("%.8f    ",tempo_da_busca_sequencial[i]);
+        printf("%.8f\n",tempo_da_busca_binaria[i]);
+    }
+    calcula_estatistica(tempo_da_busca_sequencial,quantidades_de_repeticoes,"busca sequencial");
+    calcula_estatistica(tempo_da_busca_binaria, quantidades_de_repeticoes,"busca binaria");
 
 
 }

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "programa.h"
 
-void calcula_estatistica(double tempo[],int tam){
+void calcula_estatistica(double tempo[],int tam,char*algoritmo){
     double media=0,desvio_padrao=0,soma;
 
     for(int i=0;i<tam;i++){
@@ -18,6 +18,7 @@ void calcula_estatistica(double tempo[],int tam){
     desvio_padrao=sqrt(soma/tam);
     
     printf("-------------------------------\n");
-    printf("Media do tempo de execucao do algoritmo: %.8f segundos\n",media);
-    printf("Desvio padrao do tempo de execucao do algoritmo: %.8f segundos\n",desvio_padrao);
+    printf("Media do tempo de execucao do %s: %.8f segundos\n",algoritmo,media);
+    printf("Desvio padrao do tempo de execucao do %s: %.8f segundos\n",algoritmo,desvio_padrao);
+    printf("-------------------------------\n");
 }
