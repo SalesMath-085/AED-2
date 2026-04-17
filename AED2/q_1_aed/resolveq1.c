@@ -6,7 +6,7 @@
 #define tam 1000000
 
 void questao_1(int* vetor_de_1milhao){
-    int quantidades_de_repeticoes=30;
+    int quantidades_de_repeticoes=10;
     int chave;
     double tempo_da_busca_sequencial[quantidades_de_repeticoes], tempo_da_busca_binaria[quantidades_de_repeticoes];
     //int*vetor_de_1milhao=cria_vetor(tam);
